@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Como instalar o app Presença no Ensaio</title>
+<link rel="icon" href="icon-192.png">
+<style>
+:root{--bg:#f4f6fa;--fg:#14213d;--muted:#4a5672;--card:#fff;--line:#d5dbe8;--navy:#0a3d7a;--hi:#ffd65c;--hi-fg:#14213d;--screen:#eef1f7;--btn:#e1e6f0}
+@media (prefers-color-scheme:dark){:root{--bg:#101010;--fg:#f5f5f0;--muted:#c2c2b8;--card:#1b1b1b;--line:#3a3a3a;--navy:#ffc93c;--hi:#ffc93c;--hi-fg:#101010;--screen:#262626;--btn:#353535;color-scheme:dark}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font:19px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-right)) 48px max(16px,env(safe-area-inset-left));display:flex;flex-direction:column;gap:20px}
+h1{font-size:1.6rem;line-height:1.2;color:var(--navy);margin:0}
+h2{font-size:1.3rem;margin:0}
+p{margin:0}
+.abrir{display:block;text-align:center;background:var(--navy);color:var(--bg);font-weight:700;font-size:1.15rem;text-decoration:none;border-radius:12px;padding:16px}
+.abas{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.abas button{font:700 1.05rem system-ui,sans-serif;padding:14px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+.abas button[aria-pressed="true"]{background:var(--hi);color:var(--hi-fg);border-color:var(--hi)}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:16px}
+.passo{display:flex;gap:12px;align-items:flex-start}
+.n{flex:none;width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--bg);font-weight:700;font-size:1.2rem;display:grid;place-items:center}
+.passo>div{min-width:0;display:flex;flex-direction:column;gap:8px}
+.k{background:var(--hi);color:var(--hi-fg);font-weight:700;padding:1px 7px;border-radius:6px}
+.tela{border:2px solid var(--line);border-radius:12px;background:var(--screen);padding:10px;display:flex;flex-direction:column;gap:6px;font-size:.9rem;max-width:300px}
+.ui{background:var(--btn);border-radius:8px;padding:6px 10px;color:var(--muted)}
+.alvo{background:var(--hi);color:var(--hi-fg);font-weight:700;border-radius:8px;padding:7px 10px;outline:3px solid var(--hi);outline-offset:2px}
+.linha{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.nota{font-size:.95rem;color:var(--muted)}
+.dica{border-left:5px solid var(--hi);padding:4px 0 4px 12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Como instalar o app Presença no Ensaio</h1>
+  <p>Leva menos de 1 minuto. Não precisa de loja de aplicativos nem de senha.</p>
+  <a class="abrir" href="./">Abrir o app</a>
+
+  <p><b>Qual é o seu celular?</b></p>
+  <div class="abas">
+    <button id="bA" type="button" aria-pressed="true">Android</button>
+    <button id="bI" type="button" aria-pressed="false">iPhone</button>
+  </div>
+
+  <section class="card" id="android">
+    <h2>Android</h2>
+    <div class="passo"><span class="n">1</span><div>
+      <p>Abra o link do app no <b>Chrome</b>.</p>
+      <p class="nota">Se abriu dentro do WhatsApp, toque nos 3 pontinhos e escolha "Abrir no Chrome".</p>
+    </div></div>
+    <div class="passo"><span class="n">2</span><div>
+      <p>Toque nos <span class="k">⋮</span> 3 pontinhos, no canto de cima à direita.</p>
+      <div class="tela"><div class="linha"><span class="ui">arstoreltda-bot.github.io</span><span class="alvo">⋮</span></div></div>
+    </div></div>
+    <div class="passo"><span class="n">3</span><div>
+      <p>Toque em <span class="k">Instalar app</span> (ou <b>Adicionar à tela inicial</b>).</p>
+      <div class="tela"><div class="ui">Nova guia</div><div class="ui">Favoritos</div><div class="alvo">Instalar app</div></div>
+    </div></div>
+    <div class="passo"><span class="n">4</span><div>
+      <p>Confirme em <span class="k">Instalar</span>. O ícone aparece na tela do celular.</p>
+    </div></div>
+  </section>
+
+  <section class="card" id="iphone" hidden>
+    <h2>iPhone</h2>
+    <div class="passo"><span class="n">1</span><div>
+      <p>Abra o link do app no <b>Safari</b>.</p>
+      <p class="nota">Se abriu dentro do WhatsApp, toque no ícone da bússola ou em "Abrir no Safari".</p>
+    </div></div>
+    <div class="passo"><span class="n">2</span><div>
+      <p>Toque no botão <span class="k">Compartilhar</span> (o quadrado com uma seta para cima), na barra de baixo.</p>
+      <div class="tela"><div class="linha"><span class="ui">‹</span><span class="ui">›</span><span class="alvo">⬆︎</span><span class="ui">▢</span></div></div>
+    </div></div>
+    <div class="passo"><span class="n">3</span><div>
+      <p>Role a lista para baixo e toque em <span class="k">Adicionar à Tela de Início</span>.</p>
+      <div class="tela"><div class="ui">Copiar</div><div class="ui">Adicionar aos Favoritos</div><div class="alvo">Adicionar à Tela de Início</div></div>
+    </div></div>
+    <div class="passo"><span class="n">4</span><div>
+      <p>Toque em <span class="k">Adicionar</span>, no canto de cima. O ícone aparece na tela do celular.</p>
+    </div></div>
+  </section>
+
+  <section class="card">
+    <h2>No dia do ensaio</h2>
+    <p class="dica">Abra o <b>link do ensaio</b> que a pessoa responsável mandar. Assim o seu celular registra no ensaio certo, junto com os outros celulares.</p>
+    <p>Pode registrar mesmo sem internet. Quando a internet voltar, o app envia tudo sozinho.</p>
+    <p>Abra o app com internet pelo menos uma vez antes do ensaio.</p>
+  </section>
+</div>
+<script>
+var bA=document.getElementById('bA'),bI=document.getElementById('bI');
+function mostra(i){document.getElementById('android').hidden=i;document.getElementById('iphone').hidden=!i;bA.setAttribute('aria-pressed',!i);bI.setAttribute('aria-pressed',i)}
+bA.onclick=function(){mostra(false)};bI.onclick=function(){mostra(true)};
+if(/iPhone|iPad|iPod/i.test(navigator.userAgent))mostra(true);
+</script>
+</body>
+</html>
