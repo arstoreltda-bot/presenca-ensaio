@@ -37,7 +37,7 @@ html,body{background:var(--bg);color:var(--fg)}
 body{font-family:var(--body);font-size:17px;line-height:1.5;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
 .wrap{max-width:640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+header.top{position:relative;z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;gap:10px;padding-block:10px}
 .brand{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.01em;flex:1;min-width:0}
 @media (max-width:480px){header.top .wrap{flex-wrap:wrap;row-gap:8px}header.top #ensaioSel{order:3;flex:1 1 100%;width:100%;max-width:none}}

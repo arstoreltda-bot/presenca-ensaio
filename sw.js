@@ -1,5 +1,5 @@
 // Guarda o app no celular para abrir sem internet. Mude a versão a cada atualização.
-const CACHE = "presenca-fb-v1";
+const CACHE = "presenca-fb-v2";
 const FILES = ["./", "index.html", "config.js", "manifest.webmanifest", "icon-180.png", "icon-192.png", "icon-512.png",
   "firebase-app-compat.js", "firebase-auth-compat.js", "firebase-firestore-compat.js"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES))); self.skipWaiting(); });
