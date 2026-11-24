@@ -1,0 +1,12 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Só o app (com login anônimo automático) lê e grava os ensaios.
+    match /ensaios/{ensaio}/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    match /ensaios/{ensaio} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
